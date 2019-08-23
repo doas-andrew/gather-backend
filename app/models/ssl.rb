@@ -2,8 +2,8 @@ class SSL
 	# @@public_key = OpenSSL::PKey::RSA.new(File.read(File.expand_path('../keys/ssl_keys/public.pem', __dir__)))
 	# @@private_key = OpenSSL::PKey::RSA.new(File.read(File.expand_path('../keys/ssl_keys/private.pem', __dir__)))
 
-	@@public_key = SSL_PUBLIC_KEY
-	@@private_key = SSL_PRIVATE_KEY
+	@@public_key = ENV["SSL_PUBLIC_KEY"]
+	@@private_key = ENV["SSL_PRIVATE_KEY"]
 	
 	def self.encrypt(plaintext)
 		Base64.encode64( @@public_key.public_encrypt(plaintext) )
