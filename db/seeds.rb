@@ -17,11 +17,13 @@ FriendRequest.create(recipient: User.first, sender: User.third)
 	user_id = User.all.sample.id
 	recipient_id = User.all.sample.id
 
-	Message.create(
-		user_id: user_id,
-		sender_id: user_id,
-		recipient_id: recipient_id, 
-		subject: Faker::Quote.famous_last_words,
-		content: Faker::Quotes::Shakespeare.hamlet_quote
-	) unless user_id == recipient_id
+	if user_id != recipient_id
+		Message.create(
+			user_id: user_id,
+			sender_id: user_id,
+			recipient_id: recipient_id, 
+			subject: Faker::Quote.famous_last_words,
+			content: Faker::Quotes::Shakespeare.hamlet_quote
+		)
+	end
 end
