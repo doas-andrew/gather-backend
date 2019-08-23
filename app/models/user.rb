@@ -1,3 +1,5 @@
+# require_relative 'my_rsa.rb'
+
 class User < ApplicationRecord
 
   has_many :friendships, dependent: :destroy

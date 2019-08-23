@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::API
 	before_action :authorize
 
-	JWT_KEY = File.read(File.expand_path('../keys/jwt_key.txt', __dir__))
+	# JWT_KEY = File.read(File.expand_path('../keys/jwt_key.txt', __dir__))
+	JWT_KEY = ENV["JWT_KEY"]
 
 	def jwt_encode (payload)
 			JWT.encode(payload, JWT_KEY)
