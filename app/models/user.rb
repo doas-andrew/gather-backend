@@ -68,7 +68,7 @@ class User < ApplicationRecord
 
   def encrypt_new_passwords
     if self.password_changed?
-      self.password = My_RSA.encrypt(self.password)
+      self.password = MyRSA.encrypt(self.password)
     end
   end
 
@@ -87,6 +87,6 @@ class User < ApplicationRecord
   end
 
   def authenticate(password)
-    My_RSA::decrypt(self.password) == password
+    MyRSA::decrypt(self.password) == password
   end
 end

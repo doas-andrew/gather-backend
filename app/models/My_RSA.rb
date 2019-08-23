@@ -1,4 +1,4 @@
-class My_RSA
+class MyRSA
 	# @@public_key = OpenSSL::PKey::RSA.new(File.read(File.expand_path('../keys/ssl_keys/public.pem', __dir__)))
 	# @@private_key = OpenSSL::PKey::RSA.new(File.read(File.expand_path('../keys/ssl_keys/private.pem', __dir__)))
 
