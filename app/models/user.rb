@@ -87,6 +87,6 @@ class User < ApplicationRecord
   end
 
   def authenticate(password)
-    SSL::decrypt(self.password) == password
+    My_RSA::decrypt(self.password) == password
   end
 end
