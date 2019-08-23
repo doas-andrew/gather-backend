@@ -1,4 +1,4 @@
-# require_relative 'my_rsa.rb'
+require_relative 'my_rsa.rb'
 
 class User < ApplicationRecord
 
