@@ -3,18 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-#__________________________________________________
-
 # Authentication
 gem 'openssl'
 
 # Authorization
 gem 'jwt'
 
-# organize requested data
-gem 'active_model_serializers'
-
-# makes external API requests - not used currently
 # gem 'rest-client'
 
 # seed data
@@ -22,11 +16,11 @@ gem 'faker'
 
 # 
 gem 'bundler'
-
-#__________________________________________________
+gem "nokogiri", ">= 1.10.4"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
+gem 'active_model_serializers'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
