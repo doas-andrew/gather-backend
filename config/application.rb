@@ -24,7 +24,7 @@ module Backend
       allow do
         origins 'https://gather-92c8e.firebaseapp.com'
 
-        resource 'https://gather-92c8e.firebaseapp.com',
+        resource '*',
           headers: :any,
           methods: [:get, :post, :create, :patch, :delete]
       end
