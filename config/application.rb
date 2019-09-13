@@ -26,7 +26,7 @@ module Backend
 
         resource '*',
           headers: :any,
-          methods: [:get, :post, :create, :patch, :delete]
+          methods: [:get, :post, :patch, :delete]
       end
     end
 
