@@ -19,14 +19,6 @@ Bundler.require(*Rails.groups)
 
 module Backend
   class Application < Rails::Application
-    # rack-cors
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins 'https://gather-92c8e.firebaseapp.com'
-        resource '*', headers: :any, methods: [:get, :post, :options]
-      end
-    end
-
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
